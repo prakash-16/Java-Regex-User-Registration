@@ -14,4 +14,10 @@ public class UserProfile {
 		return m.matches();
 	}
 
+	public boolean validateEmail(String email) {
+		String emailRegex = "^[a-z]{3,8}+(\\.[a-z]{2,8}?)@[a-z]{2,8}+\\.[a-z]{2,8}+(\\.[a-z]{2,4}?)$";
+		Pattern p = Pattern.compile(emailRegex);
+		Matcher m = p.matcher(email);
+		return m.matches();
+	}
 }

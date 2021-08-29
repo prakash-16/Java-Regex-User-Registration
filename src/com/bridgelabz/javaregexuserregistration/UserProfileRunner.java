@@ -25,7 +25,17 @@ public class UserProfileRunner {
 				System.out.println("Name is invalid.");
 				break;
 			}
-			System.out.println("Second name is valid.");
+			System.out.println("Last name is valid.");
+
+		case 3:
+			System.out.println("Enter your Email-Id :- ");
+			String email = sc.nextLine();
+			if (profile1.validateEmail(email) != true) {
+				System.out.println("Email-Id is invalid");
+			} 
+			else {
+				System.out.println("Email-Id is valid");
+			}
 
 		}
 
