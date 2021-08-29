@@ -29,11 +29,16 @@ public class UserProfile {
 	}
 
 	public boolean validatePassword(String password) {
-		String passwordRegex = "^([A-Z([a-z([0-9]{1,12)]{8,12})]{1,12})$";
-		Pattern p = Pattern.compile(passwordRegex);
-		Matcher m = p.matcher(password);
-		System.out.println(m.matches());
-		return m.matches();
+		if(password.length() >= 8) {
+			String passwordRegex = "^([A-Z]{1,12})([a-z]{1,12})([0-9]{1,12})([!@#$%^&*]{1})$";
+			Pattern p = Pattern.compile(passwordRegex);
+			Matcher m = p.matcher(password);
+			System.out.println(m.matches());
+			return m.matches();
+		}
+		else {
+			return false;
+		}
 	}
 
 }
