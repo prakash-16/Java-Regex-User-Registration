@@ -27,4 +27,11 @@ public class UserProfile {
 		Matcher m = p.matcher(mobileNumber);
 		return m.matches();
 	}
+
+	public boolean validatePassword(String password) {
+		String passwordRegex = "^([a-z]{8,12})$";
+		Pattern p = Pattern.compile(passwordRegex);
+		Matcher m = p.matcher(password);
+		return m.matches();
+	}
 }

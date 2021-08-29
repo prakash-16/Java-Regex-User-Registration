@@ -5,7 +5,7 @@ import java.util.*;
 public class UserProfileRunner {
 
 	public static void main(String[] args) {
-		int i = 4;
+		int i = 1;
 		UserProfile profile1 = new UserProfile();
 		Scanner sc = new Scanner(System.in);
 		switch (i) {
@@ -43,6 +43,15 @@ public class UserProfileRunner {
 				System.out.println("Mobile number is invalid");
 			} else {
 				System.out.println("Mobile number is valid");
+			}
+
+		case 5:
+			System.out.println("Enter your password :- ");
+			String password = sc.nextLine();
+			if (profile1.validatePassword(password) != true) {
+				System.out.println("Password is invalid");
+			} else {
+				System.out.println("Password is valid");
 			}
 
 		}
